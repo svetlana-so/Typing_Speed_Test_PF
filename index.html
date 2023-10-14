@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPING SPEED TEST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h2>TYPING SPEED TEST</h2>
+    <div class="wrapper">
+    <div class="box" id="timer">60</div> 
+    <div class="wpm box" id="wpm"></div>
+    <div class="accuracy box" id="accuracy"></div>
+    </div>
+    <div class="wrapper">
+    <div class="min-box">TIME</div> 
+    <div class="min-box">WPM</div>
+    <div class="min-box">%</div>
+    </div>
+    <div class="text" id="text-div">Loading Text</div>
+    <textarea id="user-input" placeholder="Type your text here"></textarea>
+    <button id="restart-button" type="button" tabindex="0">Restart</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Time Interval</th>
+                <th>Words Per Minute (WPM)</th>
+                <th>Accuracy (%)</th>
+            </tr>
+        </thead>
+        <tbody id="metrics-table">
+            <!-- Rows for user's metrics will be dynamically added here -->
+        </tbody>
+    </table>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
