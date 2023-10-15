@@ -1,6 +1,6 @@
 const timer = document.getElementById('timer');
 const textInputElement = document.getElementById('user-input')
-let countdown = 10;
+let countdown = 30;
 let timerInterval;
 
 function startTimer() {

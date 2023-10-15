@@ -1,14 +1,19 @@
 body {
-    background-color: #333;
+    background-color: #151515;
+    font-family: Andale Mono ;
 }
-h2 {
-    color: aliceblue;
-    font-family: Gill Sans;
+h1 {
+    font-size: 2.5rem;
+}
+h2, h1 {
+    color: #ddac0d;
+    text-shadow: 0 0 10px #e8c141a9, 0 0 30px #ddac0d;
 }
 .container {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 5px;
     align-items: center;
 }
 
@@ -19,11 +24,10 @@ h2 {
     align-items: center;
     width: 75px;
     height: 75px;
-    background-color: rgba(253, 254, 255, 0.917);
-    border: 2px solid grey;
     border-radius: 15px;
     font-size: 3rem;
     color: #ddac0d; 
+    text-shadow: 0 0 10px #e8c141a9, 0 0 30px #ddac0d;
 }
 .min-box {
     display: flex;
@@ -32,50 +36,104 @@ h2 {
     align-items: center;
     width: 75px;
     height: 25px;
-    background-color: rgba(253, 254, 255, 0.917);
-    border: 2px solid grey;
+    border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
+    box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
     border-radius: 15px;
-    
     color: #ddac0d; 
 }
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3,auto);
-    gap: 30px;
+    gap: 20px;
 }
 
 .text {
-    background-color: rgba(120, 119, 119, 0.583);
-    border: 2px solid rgb(29, 16, 16);
+    border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
+    box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
     min-width: 80%;
     min-height: 7rem;
     padding: .5rem 1rem;
-    text-align:justify;
-    margin: 7%;
-    border-radius: 15px;
-    font-size: 2.5rem;
+    text-align: justify;
+    margin: 3%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: rgb(81, 81, 81);
 }
+.spinner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 #user-input {
-    width: 80%;
-    height: 7rem;
-    border: 2px solid rgb(29, 16, 16);
-    border-radius: 15px;
-    font-size: 2.5rem;
+    width: 90%;
+    height: 1rem;
+    border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
+    box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+    font-size: 1.2rem;
+    font-family: Andale Mono ;
     outline: none;
     margin: auto;
     padding: .5rem 1rem;
+    background-color: transparent; 
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow-x: auto;
+    color: rgb(81, 81, 81);
 }
+#user-input::placeholder {
+    color: rgba(81, 81, 81, 0.545); /* Change the placeholder color to a different color */
+ }
 #user-input:focus {
     border-color: #ddac0d;
 }
 .correct {
-    color: rgb(28, 193, 28);
+    color: #38733e;
 }
 
 .incorrect {
-    color: red;
+    color: rgb(162, 33, 33);
     text-decoration: underline;
 }
-table, th, td {
-    border: 1px solid;
+.buttons {
+    margin: 15px;
+    
+}
+/* Add margin to the buttons for additional spacing */
+#restart-button, #reset-button {
+    margin: 0 30px; /* Adjust the value as needed */
   }
+  .button-60 {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
+    box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+    border-radius: 15px;
+    color: #a47f06; 
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: center;
+    line-height: 1.5;
+    padding: calc(.5em - 1px) 1em;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  .button-60:active {
+    border-color: rgba(81, 81, 81, 0.545);
+    outline: 0;
+  }
+  .button-60:hover {
+    border-color: rgba(81, 81, 81, 0.545);
+  }
+#myChart {
+    margin: 25px;
+}
