@@ -6,6 +6,8 @@ import { highlightCharacters } from "./highlightcharacters.js";
 import { updateChart } from "./chartuppdate.js";
 import { resetTest } from "./resetTest.js";
 
+
+
 const textDiv = document.getElementById("text-div");
 const textInputElement = document.getElementById("user-input");
 const restartButton = document.getElementById("restart-button");
@@ -48,18 +50,7 @@ textInputElement.addEventListener("input", () => {
 });
 
 function handleRestart() {
-  const finalAttemptResult = {
-    attempt: attempts.length + 1,
-    wpm: calculateWPM(correctWords, 60),
-    accuracy: accuracy(typedWords, correctWords),
-  };
-
-  attempts.push(finalAttemptResult);
-
-  // Save the updated attempts in local storage
-  localStorage.setItem("attempts", JSON.stringify(attempts));
-
-  location.reload(); // Reload the page
+    location.reload(); // Reload the page
 }
 
 resetButton.addEventListener("click", resetTest);
@@ -76,4 +67,4 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-updateChart(attempts);
+export {attempts, correctWords, typedWords}
