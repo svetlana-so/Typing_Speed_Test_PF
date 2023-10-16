@@ -1,10 +1,10 @@
 import { updateAttemptsAndLocalStorage } from "./updateLocalStorage.js";
-import {attempts, correctWords, typedWords} from "./main.js"
+import { attempts, correctWords, typedWords } from "./main.js";
 import { updateChart } from "./chartuppdate.js";
 
 const timer = document.getElementById("timer");
 const textInputElement = document.getElementById("user-input");
-let countdown = 10; // Reduced for testing purposes
+let countdown = 60;
 let timerInterval;
 
 function closeCustomAlert() {
@@ -32,11 +32,11 @@ function startTimer() {
         okButton.addEventListener("click", () => {
           closeCustomAlert();
           updateAttemptsAndLocalStorage(attempts, correctWords, typedWords);
-          updateChart(attempts)
+          updateChart(attempts);
         });
       }
     }, 1000);
   }
 }
 
-export { startTimer};
+export { startTimer };

@@ -98,7 +98,7 @@ h1 {
 }
 #user-input {
   width: 90%;
-  height: 1rem;
+  height: 1.5rem;
   border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
   box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
   font-size: 1.2rem;

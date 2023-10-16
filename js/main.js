@@ -3,10 +3,7 @@ import { startTimer } from "./timer.js";
 import { calculateWPM } from "./wpm.js";
 import { accuracy } from "./accuracy.js";
 import { highlightCharacters } from "./highlightcharacters.js";
-import { updateChart } from "./chartuppdate.js";
 import { resetTest } from "./resetTest.js";
-
-
 
 const textDiv = document.getElementById("text-div");
 const textInputElement = document.getElementById("user-input");
@@ -50,7 +47,7 @@ textInputElement.addEventListener("input", () => {
 });
 
 function handleRestart() {
-    location.reload(); // Reload the page
+  location.reload(); // Reload the page
 }
 
 resetButton.addEventListener("click", resetTest);
@@ -63,8 +60,8 @@ document.addEventListener("keydown", (event) => {
 restartButton.addEventListener("click", handleRestart);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && event.target === document.body) {
-    handleRestart(); // Call the combined function to handle restarting and resetting
+    handleRestart();
   }
 });
 
-export {attempts, correctWords, typedWords}
+export { attempts, correctWords, typedWords };
