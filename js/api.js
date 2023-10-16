@@ -5,22 +5,23 @@ async function getArrayOfines() {
     const response = await fetch(API);
     const data = await response.json();
 
-    // Filter poems with linecount > 15
-    const poemsWithMoreThan15Lines = data.filter(
+    // Filter poems with linecount > 20
+    const notShortPoems = data.filter(
       (poem) => parseInt(poem.linecount) > 20
     );
 
-    if (poemsWithMoreThan15Lines.length > 0) {
+    if (notShortPoems.length > 0) {
         //generates a random index 
       const randomPoem =
-        poemsWithMoreThan15Lines[
-          Math.floor(Math.random() * poemsWithMoreThan15Lines.length)
+      notShortPoems[
+          Math.floor(Math.random() * notShortPoems.length)
         ];
       const poemLines = randomPoem.lines;
       return poemLines;
+      
     
     } else {
-      console.log("No poems with more than 15 lines found.");
+      console.log("No poems with more than 20 lines found.");
       return [];
     }
   } catch (error) {

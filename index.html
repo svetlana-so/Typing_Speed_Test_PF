@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TYPING SPEED TEST</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://kit.fontawesome.com/4c15b09dc8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-    <h1>Word Whiz</h1>
-    <h2>TYPING SPEED TEST</h2>
-    <div class="wrapper">
-    <div class="box" id="timer">60</div> 
-    <div class="wpm box" id="wpm">0</div>
-    <div class="accuracy box" id="accuracy">0</div>
-    </div>
-    <div class="wrapper">
-    <div class="min-box">TIME</div> 
-    <div class="min-box">WPM</div>
-    <div class="min-box">%</div>
-    </div>
-    <div class="text" id="text-div">
-        <div class="spinner-container">
-        <i class="fa-solid fa-spinner fa-spin fa-2xl"></i>
+    <script
+      src="https://kit.fontawesome.com/4c15b09dc8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="overlay" id="overlay">
+        <div class="custom-alert">
+          <p>TIME IS OVER!</p>
+          <button id="ok-button" onclick="closeCustomAlert()">OK</button>
         </div>
-    </div>
-    <textarea id="user-input" placeholder="Type your text here"></textarea>
-    <div class="buttons">
-      <button class="button-60" role="button" id="restart-button" type="button">Restart</button>
-      <button class="button-60" role="button" id="reset-button" type="button">Reset</button>
-    </div>
-    <div>
-        <canvas id="myChart" width="800" height="300"></canvas>
       </div>
+    <div class="container">
+      <h1>Word Whiz</h1>
+      <h2>TYPING SPEED TEST</h2>
+      <div class="wrapper">
+        <div class="box" id="timer">60</div>
+        <div class="wpm box" id="wpm">0</div>
+        <div class="accuracy box" id="accuracy">0</div>
+      </div>
+      <div class="wrapper">
+        <div class="min-box">TIME</div>
+        <div class="min-box">WPM</div>
+        <div class="min-box">%</div>
+      </div>
+      <div class="text" id="text-div">
+        <div class="spinner-container">
+          <i class="fa-solid fa-spinner fa-spin fa-2xl"></i>
+        </div>
+      </div>
+      <textarea id="user-input" placeholder="Type your text here"></textarea>
+      <div class="buttons">
+        <button
+          class="button-60"
+          id="restart-button"
+          type="button"
+        >
+          Restart
+        </button>
+        <button 
+           class="button-60" 
+           id="reset-button" 
+           type="button">
+          Reset
+        </button>
+      </div>
+      <div class="shortcuts">
+        <p>press "ENTER"</p>
+        <p>press "ESC"</p>
+      </div>
+      <div class="chart-container" style="position: relative; height: 40vh; width: 80vw;">
+        <canvas id="myChart"></canvas>
+    </div>
     </div>
     <script type="module" src="/js/main.js"></script>
-    
-</body>
+  </body>
 </html>
