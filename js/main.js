@@ -11,7 +11,7 @@ const restartButton = document.getElementById("restart-button");
 const resetButton = document.getElementById("reset-button");
 const wpmDisplay = document.getElementById("wpm");
 const accuracyDisplay = document.getElementById("accuracy");
-const arrayFromApiwithWords = arrayOfWordsFromApi;
+//const arrayFromApiwithWords = arrayOfWordsFromApi;
 
 let correctWords = 0; // Track the current word index
 let typedWords = 0;
@@ -32,7 +32,7 @@ textInputElement.addEventListener("input", () => {
   const userWords = textInputElement.value.split(" "); //its an array
 
   for (let i = 0; i < userWords.length; i++) {
-    if (arrayFromApiwithWords[i] === userWords[i]) {
+    if (arrayOfWordsFromApi[i] === userWords[i]) {
       correctWords += 1;
     }
   }

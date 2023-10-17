@@ -1,6 +1,5 @@
-export function updateChart(arg1) {
+export function updateChart(attempts) {
   let myChart; // a variable to store the chart instance
-  const attempts = arg1;
   const x = attempts.map((attempt, index) => index + 1);
   const wpm = attempts.map((attempt) => attempt.wpm);
   const accuracy = attempts.map((attempt) => parseFloat(attempt.accuracy));

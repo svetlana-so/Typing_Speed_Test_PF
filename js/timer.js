@@ -4,7 +4,9 @@ import { updateChart } from "./chartuppdate.js";
 
 const timer = document.getElementById("timer");
 const textInputElement = document.getElementById("user-input");
+
 let countdown = 60;
+timer.innerText = countdown;
 let timerInterval;
 
 function closeCustomAlert() {

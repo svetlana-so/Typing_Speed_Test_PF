@@ -1,7 +1,4 @@
-export function calculateWPM(words, time) {
-    const textWords = words;
-    const seconds = time;
-    
+export function calculateWPM(textWords, seconds) {
     const minutes = seconds / 60;
     const wpm = Math.round((textWords / minutes));
     
