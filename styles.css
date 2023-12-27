@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
   display: none;
   justify-content: center;
@@ -66,8 +66,8 @@ h1 {
   align-items: center;
   width: 75px;
   height: 25px;
-  border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
-  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+  border: 2px solid rgba(221, 172, 13, 0.5);
+  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5);
   border-radius: 15px;
   color: #ddac0d;
 }
@@ -79,8 +79,8 @@ h1 {
 
 .text {
   position: relative;
-  border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
-  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+  border: 2px solid rgba(221, 172, 13, 0.5);
+  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5);
   min-width: 80%;
   min-height: 7rem;
   padding: 0.5rem 1rem;
@@ -99,25 +99,20 @@ h1 {
 #user-input {
   width: 90%;
   height: 1.5rem;
-  border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
-  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+  border: 2px solid rgba(221, 172, 13, 0.5);
+  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5);
   font-size: 1.2rem;
   font-family: Andale Mono;
   outline: none;
   margin: auto;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  white-space: nowrap;
   overflow-x: auto;
   color: rgb(81, 81, 81);
 }
 #user-input::placeholder {
-  color: rgba(
-    81,
-    81,
-    81,
-    0.545
-  ); /* Change the placeholder color to a different color */
+  color: rgba(81, 81, 81, 0.545);
 }
 #user-input:focus {
   border-color: #ddac0d;
@@ -133,18 +128,18 @@ h1 {
 .buttons {
   margin: 15px;
 }
-/* Add margin to the buttons for additional spacing */
+
 #restart-button,
 #reset-button {
-  margin: 0 30px; /* Adjust the value as needed */
+  margin: 0 30px;
 }
 .button-60,
 #ok-button {
   align-items: center;
   appearance: none;
   background-color: transparent;
-  border: 2px solid rgba(221, 172, 13, 0.5); /* Neon border color with transparency */
-  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5); /* Neon box shadow with transparency */
+  border: 2px solid rgba(221, 172, 13, 0.5);
+  box-shadow: 0 0 10px rgba(221, 172, 13, 0.5);
   border-radius: 15px;
   color: #a47f06;
   box-sizing: border-box;
@@ -198,6 +193,6 @@ h1 {
   height: 100%;
 }
 #progress {
-    color: #ddac0d;
+  color: #ddac0d;
   text-shadow: 0 0 10px #e8c141a9, 0 0 30px #ddac0d;
 }

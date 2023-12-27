@@ -14,7 +14,6 @@ function closeCustomAlert() {
   overlay.style.display = "none";
 }
 
-// Inside the startTimer function, display the overlay and change the button's ID
 function startTimer() {
   timer.innerText = countdown;
 
@@ -25,7 +24,6 @@ function startTimer() {
 
       if (countdown <= 0) {
         clearInterval(timerInterval);
-        // Display the overlay when the timer is over
         const overlay = document.getElementById("overlay");
         overlay.style.display = "flex";
         textInputElement.disabled = true;

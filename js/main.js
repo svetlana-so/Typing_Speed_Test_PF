@@ -11,9 +11,8 @@ const restartButton = document.getElementById("restart-button");
 const resetButton = document.getElementById("reset-button");
 const wpmDisplay = document.getElementById("wpm");
 const accuracyDisplay = document.getElementById("accuracy");
-//const arrayFromApiwithWords = arrayOfWordsFromApi;
 
-let correctWords = 0; // Track the current word index
+let correctWords = 0;
 let typedWords = 0;
 let attempts = JSON.parse(localStorage.getItem("attempts")) || [];
 
@@ -29,7 +28,7 @@ textInputElement.addEventListener("input", () => {
   highlightCharacters(arrayQuote, arrayValue);
 
   correctWords = 0;
-  const userWords = textInputElement.value.split(" "); //its an array
+  const userWords = textInputElement.value.split(" ");
 
   for (let i = 0; i < userWords.length; i++) {
     if (arrayOfWordsFromApi[i] === userWords[i]) {
@@ -41,19 +40,18 @@ textInputElement.addEventListener("input", () => {
   typedWords = userWords.length;
   accuracyDisplay.innerHTML = accuracy(userWords.length, correctWords);
 
-  //for checking
   console.log(userWords);
   console.log(correctWords);
 });
 
 function handleRestart() {
-  location.reload(); // Reload the page
+  location.reload();
 }
 
 resetButton.addEventListener("click", resetTest);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && event.target === document.body) {
-    resetTest(); // Call the resetTest function to reset the test
+    resetTest();
   }
 });
 

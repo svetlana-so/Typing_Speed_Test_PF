@@ -1,8 +1,5 @@
 export function resetTest() {
-    // Reset the attempts
-    localStorage.setItem('attempts', JSON.stringify([]));
-    // Reset the final attempt
-    localStorage.removeItem('finalAttempt');
-    // Reload the page
-    location.reload();
-  }
+  localStorage.setItem("attempts", JSON.stringify([]));
+  localStorage.removeItem("finalAttempt");
+  location.reload();
+}
