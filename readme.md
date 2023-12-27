@@ -1,36 +1,42 @@
-Typing Test Application
-*Overview*
-The Typing Test Application is a simple web-based tool designed to help users improve their typing speed and accuracy. This application fetches random text from an API and challenges users to type the text as quickly and accurately as possible within a time limit. It provides feedback on typing speed (words per minute) and accuracy, helping users track their progress.
+### Typing Test Application
 
-*Features*
-Typing Challenge: Users are presented with a random set of words to type within a set time limit.
+The Typing Test Application is a simple web-based tool designed to help you improve your typing speed and accuracy. This application fetches random text from an API and challenges you to type the text as quickly and accurately as possible within a time limit. It provides feedback on typing speed (words per minute) and accuracy, helping users track their progress.
 
-Timer: A countdown timer is displayed on the screen, and when time runs out, the user's input is disabled.
+## Features
+Typing Challenge: You are presented with a random set of words to type within a set time limit.
 
-Word Highlighting: As users type, the characters they type are highlighted in the displayed text for better visualization.
+Timer: A countdown timer is displayed on the screen, and when time runs out, the input is disabled.
 
-WPM Calculation: The application calculates and displays the user's typing speed in words per minute (WPM).
+Word Highlighting: As you type, the characters you type are highlighted in the displayed text for better visualization.
 
-Accuracy Measurement: It also measures and displays the user's accuracy in typing, showing what percentage of words were typed correctly.
+WPM Calculation: The application calculates and displays the typing speed in words per minute (WPM).
 
-Restart and Reset: Users can restart the typing challenge to practice again, or they can reset the test to start over with a fresh text sample.
+Accuracy Measurement: It also measures and displays the accuracy in typing, showing what percentage of words were typed correctly.
 
-Progress Tracking: The application allows users to track their progress and compare their performance over multiple attempts.
+Restart and Reset: You can restart the typing challenge to practice again, or you can reset the test to start over with a fresh text sample.
 
-*Usage*
-Visit the application in a web browser.
-Start typing to begin the typing challenge.
-Type the displayed text as quickly and accurately as possible.
-After the time runs out, the application will display your WPM and accuracy.
-You can restart the challenge to practice more or reset it to start anew.
+Progress Tracking: The application allows you to track the progress and compare your performance over multiple attempts.
 
-*Technologies Used*
+## Usage
+-Visit the application in a web browser using Live Server.
+-Start typing to begin the typing challenge.
+-Type the displayed text as quickly and accurately as possible.
+-After the time runs out, the application will display your WPM and accuracy.
+-You can restart the challenge to practice more or reset it to start anew.
+
+## Technologies Used
+
+``` bash
 HTML
 CSS
 JavaScript
++
+Chart.js
+```
 
-*Getting Started*
+
+## Getting Started
 To run this application locally:
 
 Clone the repository to your local machine.
-Open the index.html file in a web browser.
+Open the index.html file in a web browser with Live Server

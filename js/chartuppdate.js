@@ -1,18 +1,16 @@
 export function updateChart(attempts) {
-  let myChart; // a variable to store the chart instance
+  let myChart; 
   const x = attempts.map((attempt, index) => index + 1);
   const wpm = attempts.map((attempt) => attempt.wpm);
   const accuracy = attempts.map((attempt) => parseFloat(attempt.accuracy));
   const ctx = document.getElementById('myChart').getContext('2d');
 
   if (myChart) {
-    // If the chart instance already exists, the data will be uppdated 
     myChart.data.labels = x;
     myChart.data.datasets[0].data = wpm;
     myChart.data.datasets[1].data = accuracy;
-    myChart.update(); // Update the chart
+    myChart.update(); 
   } else {
-    // If the chart instance doesn't exist, the new Chart will be created
     myChart = new Chart(ctx, {
       type: 'line',
       data: {
